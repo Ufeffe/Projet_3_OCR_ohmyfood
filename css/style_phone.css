@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+html {
+    --prim-color: #9356DC;
+    --sd-color: #FF79DA;
+    --ter-color: #99E2D0;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 375px;
+}
+
+h1,
+h2,
+h3,
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
+.logo_header {
+    width: 50%;
+    margin: auto;
+}
+
+.localisation {
+    display: flex;
+    background-color: rgb(226, 226, 226);
+    box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.3);
+}
+
+.ville-localisation,
+.btn_exploration {
+    margin: auto;
+}
+
+.image_restaurant {
+    width: 360px;
+    height: 180px;
+    object-fit: cover;
+}
