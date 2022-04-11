@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap');
+html {
+    --prim-color: #9356DC;
+    --sd-color: #FF79DA;
+    --ter-color: #99E2D0;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 375px;
+}
