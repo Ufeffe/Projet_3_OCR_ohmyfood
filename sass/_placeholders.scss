@@ -1,0 +1,26 @@
+%flex_column_center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+%flex_row_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%btn {
+    width: 230px;
+    height: 50px;
+    background: linear-gradient($sd-color, $prim-color);
+    border-radius: 50px;
+    border: white;
+    cursor: pointer;
+}
+
+%btn__font {
+    font-size: 1.2em;
+    color: white;
+}

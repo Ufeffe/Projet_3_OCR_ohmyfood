@@ -1,0 +1,85 @@
+@import './_variables.scss';
+@import './mixins.scss';
+@import './_placeholders.scss';
+h1,
+h2,
+h3,
+p {
+    font-family: 'roboto', sans-serif;
+}
+
+p {
+    font-weight: 500;
+}
+
+body {
+    margin: auto;
+    width: 375px;
+}
+
+.restaurant_card_image_all {
+    width: 335px;
+    height: 175px;
+}
+
+.logo__header__holder {
+    text-align: center;
+    background-color: rgb(248, 248, 248);
+}
+
+.logo__header__omf {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    height: 1.75em;
+}
+
+.location {
+    display: flex;
+    height: 50px;
+    background-color: rgb(236, 236, 236);
+    box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.2);
+    &__pin {
+        position: relative;
+        top: 15px;
+        left: 105px;
+    }
+    &__ville {
+        margin: auto;
+    }
+}
+
+.discover {
+    background-color: rgb(248, 248, 248);
+    @extend %flex_column_center;
+    &__title {
+        text-align: center;
+        width: 240px;
+        margin-top: 35px;
+    }
+    &__info {
+        text-align: center;
+        margin-top: 15px;
+        margin-bottom: 20px;
+        >p {
+            font-weight: 400;
+        }
+    }
+    &__btn {
+        margin-bottom: 30px;
+    }
+}
+
+.discover__btn__cta {
+    @extend %btn;
+}
+
+.description__cta {
+    @extend %btn__font;
+}
+
+.process {
+    height: 500px;
+    &__wrapper {
+        @extend %flex_column_center;
+    }
+}
