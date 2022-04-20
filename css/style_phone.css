@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&family=Shrikhand&display=swap");
 * {
   padding: 0px;
   margin: 0px;
@@ -21,25 +21,54 @@ ul {
   align-items: center;
 }
 
+.process__slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .discover__btn__cta {
   width: 230px;
   height: 50px;
-  background: linear-gradient(#FF79DA, #9356DC);
+  margin-bottom: 30px;
+  background: rgb(147, 86, 220);
+  background: linear-gradient(354deg, rgb(147, 86, 220) 0%, rgb(213, 107, 219) 67%, rgb(255, 121, 218) 100%);
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
   border-radius: 50px;
   border: white;
   cursor: pointer;
 }
+.discover__btn__cta:hover {
+  transition: all 0.5s ease;
+  background: linear-gradient(50deg, rgb(147, 86, 220) 0%, rgb(213, 107, 219) 67%, rgb(255, 121, 218) 100%);
+  opacity: 0.8;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
+}
 
-.description__cta {
-  font-size: 1.2em;
-  color: white;
+.process__slide {
+  width: 330px;
+  height: 75px;
+  margin-bottom: 15px;
+  border-radius: 20px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 h1,
 h2,
 h3,
+li,
 p {
   font-family: "roboto", sans-serif;
+}
+
+h4 {
+  font-family: "Shrikhand", cursive;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 1.2em;
+  color: black;
 }
 
 p {
@@ -49,16 +78,11 @@ p {
 body {
   margin: auto;
   width: 375px;
-}
-
-.restaurant_card_image_all {
-  width: 335px;
-  height: 175px;
+  border: solid red 1px;
 }
 
 .logo__header__holder {
   text-align: center;
-  background-color: rgb(248, 248, 248);
 }
 
 .logo__header__omf {
@@ -70,7 +94,7 @@ body {
 .location {
   display: flex;
   height: 50px;
-  background-color: rgb(236, 236, 236);
+  background-color: #eaeaea;
   box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 .location__pin {
@@ -83,7 +107,7 @@ body {
 }
 
 .discover {
-  background-color: rgb(248, 248, 248);
+  background-color: #f6f6f6;
 }
 .discover__title {
   text-align: center;
@@ -93,7 +117,7 @@ body {
 .discover__info {
   text-align: center;
   margin-top: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 .discover__info > p {
   font-weight: 400;
@@ -102,8 +126,138 @@ body {
   margin-bottom: 30px;
 }
 
-.process {
-  height: 500px;
+.description__cta {
+  font-size: 1.2em;
+  color: white;
+}
+
+.title_box {
+  margin: 50px 0px 20px 20px;
+}
+
+.process__slide {
+  justify-content: flex-start;
+}
+
+.process_number {
+  width: 25px;
+  height: 25px;
+  border-radius: 50px;
+  background-color: #9356DC;
+  font-size: 0.9em;
+  color: white;
+  position: relative;
+  left: -12px;
+}
+.process_number > p {
+  position: relative;
+  top: 4px;
+  left: 8px;
+}
+
+.margin_ico_grey {
+  margin-left: 15px;
+  margin-right: 15px;
+  color: grey;
+}
+
+.prim-color {
+  color: #9356DC;
+}
+
+.restaurant_card_image_all {
+  width: 100%;
+  height: 175px;
+  object-fit: cover;
+}
+
+.restaurant__wrapper {
+  width: 335px;
+  margin: auto;
+}
+
+.restaurant__card {
+  width: 100%;
+  height: 250px;
+  margin-bottom: 30px;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.restaurant__info {
+  height: 55px;
+  margin-left: 15px;
+}
+.restaurant__info__title {
+  margin: 10px 0px 5px 0px;
+}
+.restaurant__info__sub {
+  font-weight: 400;
+}
+
+.fa-heart {
+  font-size: 1.5em;
+}
+.fa-heart:hover {
+  font-weight: 900;
+  color: rgb(147, 86, 220);
+  cursor: pointer;
+}
+
+.placement_heart_i {
+  position: relative;
+  top: -50px;
+  left: 290px;
+}
+
+.new_sticker {
+  width: 80px;
+  height: 30px;
+  background-color: #99E2D0;
+  position: relative;
+  top: -250px;
+  left: 240px;
+  border-radius: 3px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+}
+.new_sticker > p {
+  color: #1b6150;
+  text-align: center;
+  padding-top: 7px;
+  font-size: 0.9em;
+}
+
+footer {
+  height: 200px;
+  background-color: #353535;
+  color: white;
+}
+
+.logo_omf_footer {
+  height: 50px;
+  background-image: url(/images/logo/ohmyfood@2x.svg);
+  background-repeat: no-repeat;
+}
+
+.list__footer {
+  margin-left: 15px;
+}
+
+.list__footer__li {
+  margin: 10px;
+}
+.list__footer__li > a {
+  color: white;
+}
+
+.box_i {
+  width: 20px;
+}
+
+.i_rotate {
+  transform: rotate(-15deg);
+  font-size: 0.65em;
 }
 
 /*# sourceMappingURL=style_phone.css.map */

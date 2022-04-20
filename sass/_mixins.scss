@@ -1,0 +1,4 @@
+@mixin font_size_color ($size: 1.2em, $btn_font_color:black) {
+    font-size: $size;
+    color: $btn_font_color;
+}
