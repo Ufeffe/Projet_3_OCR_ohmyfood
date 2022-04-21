@@ -11,11 +11,15 @@
     align-items: center;
 }
 
+%title_fw700_fs1-2em {
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
 %btn_cta {
     width: 230px;
     height: 50px;
     margin-bottom: 30px;
-    // background: linear-gradient($sd-color, $prim-color, $prim-color);
     background: rgb(147, 86, 220);
     background: linear-gradient(354deg, rgba(147, 86, 220, 1) 0%, rgba(213, 107, 219, 1) 67%, rgba(255, 121, 218, 1) 100%);
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
@@ -32,8 +36,8 @@
 
 %card_selector {
     width: 330px;
-    height: 75px;
+    height: 65px;
     margin-bottom: 15px;
-    border-radius: 20px;
+    border-radius: 15px;
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
 }

@@ -1,31 +1,27 @@
 @import './_variables.scss';
 @import './mixins.scss';
 @import './_placeholders.scss';
-h1,
-h2,
-h3,
 li,
 p {
     font-family: $font-text;
 }
 
-h4 {
-    font-family: 'Shrikhand', cursive;
+h1 {
+    font-family: $font-title;
 }
 
-h2 {
-    font-weight: 600;
-    @include font_size_color(1.2em);
+a {
+    text-decoration: none;
+    color: black;
 }
 
-p {
-    font-weight: 500;
+ul {
+    list-style-type: none;
 }
 
 body {
     margin: auto;
     width: 375px;
-    border: solid red 1px;
 }
 
 // Fin de la base du CSS
@@ -66,21 +62,19 @@ body {
         text-align: center;
         width: 240px;
         margin-top: 35px;
+        @extend %title_fw700_fs1-2em;
     }
     &__info {
         text-align: center;
         margin-top: 15px;
         margin-bottom: 30px;
-        >p {
-            font-weight: 400;
-        }
     }
     &__btn {
         margin-bottom: 30px;
     }
 }
 
-.discover__btn__cta {
+.btn__cta {
     @extend %btn_cta;
 }
 
@@ -90,11 +84,14 @@ body {
 
 // Fin de la section Exploration
 //
-.title_box {
-    margin: 50px 0px 20px 20px
+.title_box_section {
+    @extend %title_fw700_fs1-2em;
+    margin: 0px 0px 20px 20px;
+    padding-top: 50px;
 }
 
 .process {
+    margin-bottom: 50px;
     &__wrapper {
         @extend %flex_column_center;
     }
@@ -102,6 +99,16 @@ body {
         @extend %flex_row_center;
         justify-content: flex-start;
         @extend %card_selector;
+        &__text {
+            font-weight: 600;
+        }
+        &:hover {
+            cursor: pointer;
+            box-shadow: inset rgba( 147, 86, 220, 0.2) 0px 10px 50px;
+        }
+        &:hover .margin_ico_grey {
+            color: $prim-color;
+        }
     }
 }
 
@@ -122,16 +129,17 @@ body {
 
 .margin_ico_grey {
     margin-left: 15px;
-    margin-right: 15px;
+    margin-right: 30px;
     color: grey;
-}
-
-.prim-color {
-    color: $prim-color;
 }
 
 // Fin de la section Fonctionnement
 //
+.restaurant {
+    background-color: #f6f6f6;
+    padding-bottom: 4px;
+}
+
 .restaurant_card_image_all {
     width: 100%;
     height: 175px;
@@ -150,12 +158,14 @@ body {
     overflow: hidden;
     border-radius: 15px;
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+    background-color: white;
 }
 
 .restaurant__info {
     height: 55px;
     margin-left: 15px;
     &__title {
+        font-weight: 600;
         margin: 10px 0px 5px 0px;
     }
     &__sub {
@@ -165,7 +175,9 @@ body {
 
 .fa-heart {
     font-size: 1.5em;
+    color: black;
     &:hover {
+        transition: all 2s ease;
         font-weight: 900;
         color: rgba(147, 86, 220, 1);
         cursor: pointer;
@@ -201,18 +213,14 @@ footer {
     height: 200px;
     background-color: #353535;
     color: white;
-    // &>h4 {
-    //     font-size: 1.2em;
-    //     letter-spacing: 0.05em;
-    //     margin: 15px 0px 10px 15px;
-    //     color: white;
-    // }
-}
-
-.logo_omf_footer {
-    height: 50px;
-    background-image: url(/images/logo/ohmyfood@2x.svg);
-    background-repeat: no-repeat;
+    &>p {
+        font-family: $font-title;
+        font-size: 1.2em;
+        letter-spacing: 0.05em;
+        padding-top: 15px;
+        margin: 0px 0px 10px 25px;
+        color: white;
+    }
 }
 
 .list__footer {
@@ -236,4 +244,142 @@ footer {
 }
 
 // Fin du Footer
+//
+.fa-arrow-left {
+    position: relative;
+    top: -20px;
+    left: -70px;
+}
+
+.image_background {
+    width: 375px;
+    position: relative;
+    margin-bottom: -50px;
+}
+
+.menu__display {
+    position: relative;
+    // top: -50px;
+    background-color: #f6f6f6;
+    border-radius: 45px 45px 0px 0px;
+    padding-bottom: 1px;
+}
+
+.title__box__menu {
+    padding: 15px;
+    padding-top: 35px;
+    @extend %flex_row_center;
+    justify-content: space-between;
+    @extend %title_fw700_fs1-2em;
+}
+
+.heart_restaurant {
+    margin-right: 30px;
+}
+
+.menu_titre {
+    text-transform: uppercase;
+    margin-left: 15px;
+    padding-top: 15px;
+}
+
+.underline {
+    width: 40px;
+    height: 3px;
+    margin-left: 15px;
+    border-bottom: solid $ter-color 3px;
+}
+
+// 
+// Debut systeme box__menu + effet hover
+.box__menu {
+    width: 360px;
+    height: 60px;
+    @extend %card_selector;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 15px auto;
+    overflow: hidden;
+    background-color: white;
+    cursor: pointer;
+    .box__menu__info {
+        width: 300px;
+        margin: auto 0px auto 15px;
+        &__title {
+            width: 300px;
+            font-weight: 600;
+            white-space: nowrap;
+            margin-right: 150px;
+        }
+        &__sub {
+            font-size: 0.8em;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+    .price {
+        margin: auto;
+        padding-top: 15px
+    }
+    &:hover .box__menu__info {
+        width: 200px;
+        transition: 0.7s ease-in-out;
+        transform-origin: left;
+    }
+    &:hover .menu__hover__text {
+        transform: scaleX(1);
+    }
+    &:hover .rotate {
+        transform: rotate(360deg);
+    }
+}
+
+.menu__hover__text {
+    width: 70px;
+    height: 100%;
+    background-color: $ter-color;
+    transform: scaleX(0);
+    transition: 1s ease;
+    transform-origin: center right;
+}
+
+.hover_icone {
+    width: 100%;
+    margin-top: 15px;
+    &_circle {
+        width: 30px;
+        height: 30px;
+        border: 1px white solid;
+        background-color: white;
+        border-radius: 50%;
+    }
+    &_circle {
+        margin: auto;
+    }
+}
+
+.fa-check {
+    color: $ter-color;
+}
+
+.rotate {
+    transition: 1.2s ease;
+}
+
+.fa-check {
+    position: relative;
+    top: 5px;
+    left: 7px;
+}
+
+// Fin du systeme box__menu + effet hover
+//
+.btn_commander {
+    width: 230px;
+    margin: 40px auto;
+}
+
+// Fin des pages menus
 //
