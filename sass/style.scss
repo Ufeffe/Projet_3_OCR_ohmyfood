@@ -303,26 +303,6 @@ footer {
     overflow: hidden;
     background-color: white;
     cursor: pointer;
-    .box__menu__info {
-        width: 300px;
-        margin: auto 0px auto 15px;
-        &__title {
-            width: 300px;
-            font-weight: 600;
-            white-space: nowrap;
-            margin-right: 150px;
-        }
-        &__sub {
-            font-size: 0.8em;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-    }
-    .price {
-        margin: auto;
-        padding-top: 15px
-    }
     &:hover .box__menu__info {
         width: 200px;
         transition: 0.7s ease-in-out;
@@ -334,10 +314,40 @@ footer {
     &:hover .rotate {
         transform: rotate(360deg);
     }
+    //
+    // effet de ressort à l'apparition du prix
+    // &:hover .price {
+    //     padding-left: 45px;
+    // }
+    //
+    //
+}
+
+.box__menu__info {
+    width: 300px;
+    margin: auto 0px auto 15px;
+    &__title {
+        width: 300px;
+        font-weight: 600;
+        white-space: nowrap;
+        margin-right: 150px;
+    }
+    &__sub {
+        font-size: 0.8em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.price {
+    // transition: all 0.5s;
+    margin: auto;
+    padding-top: 15px
 }
 
 .menu__hover__text {
-    width: 70px;
+    width: 50px;
     height: 100%;
     background-color: $ter-color;
     transform: scaleX(0);
@@ -347,10 +357,10 @@ footer {
 
 .hover_icone {
     width: 100%;
-    margin-top: 15px;
+    margin-top: 20px;
     &_circle {
-        width: 30px;
-        height: 30px;
+        width: 20px;
+        height: 20px;
         border: 1px white solid;
         background-color: white;
         border-radius: 50%;
@@ -370,8 +380,8 @@ footer {
 
 .fa-check {
     position: relative;
-    top: 5px;
-    left: 7px;
+    top: 3px;
+    left: 3px;
 }
 
 // Fin du systeme box__menu + effet hover

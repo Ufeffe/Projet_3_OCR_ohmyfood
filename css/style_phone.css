@@ -322,26 +322,6 @@ footer > p {
   background-color: white;
   cursor: pointer;
 }
-.box__menu .box__menu__info {
-  width: 300px;
-  margin: auto 0px auto 15px;
-}
-.box__menu .box__menu__info__title {
-  width: 300px;
-  font-weight: 600;
-  white-space: nowrap;
-  margin-right: 150px;
-}
-.box__menu .box__menu__info__sub {
-  font-size: 0.8em;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.box__menu .price {
-  margin: auto;
-  padding-top: 15px;
-}
 .box__menu:hover .box__menu__info {
   width: 200px;
   transition: 0.7s ease-in-out;
@@ -354,8 +334,30 @@ footer > p {
   transform: rotate(360deg);
 }
 
+.box__menu__info {
+  width: 300px;
+  margin: auto 0px auto 15px;
+}
+.box__menu__info__title {
+  width: 300px;
+  font-weight: 600;
+  white-space: nowrap;
+  margin-right: 150px;
+}
+.box__menu__info__sub {
+  font-size: 0.8em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.price {
+  margin: auto;
+  padding-top: 15px;
+}
+
 .menu__hover__text {
-  width: 70px;
+  width: 50px;
   height: 100%;
   background-color: #99E2D0;
   transform: scaleX(0);
@@ -365,11 +367,11 @@ footer > p {
 
 .hover_icone {
   width: 100%;
-  margin-top: 15px;
+  margin-top: 20px;
 }
 .hover_icone_circle {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   border: 1px white solid;
   background-color: white;
   border-radius: 50%;
@@ -388,8 +390,8 @@ footer > p {
 
 .fa-check {
   position: relative;
-  top: 5px;
-  left: 7px;
+  top: 3px;
+  left: 3px;
 }
 
 .btn_commander {
