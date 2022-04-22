@@ -5,6 +5,20 @@
   box-sizing: border-box;
 }
 
+@keyframes apparition {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  50% {
+    opacity: 0.1;
+    transform: translateY(35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
 .process__wrapper, .discover {
   display: flex;
   flex-direction: column;
@@ -34,11 +48,21 @@
   border: white;
   cursor: pointer;
 }
-.btn__cta:hover {
-  transition: all 0.5s ease;
+.btn__cta:after {
+  position: relative;
+  top: -19px;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
   background: linear-gradient(50deg, rgb(147, 86, 220) 0%, rgb(213, 107, 219) 67%, rgb(255, 121, 218) 100%);
-  opacity: 0.8;
-  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 50px;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+.btn__cta:hover::after {
+  opacity: 1;
 }
 
 .box__menu, .process__slide {
@@ -115,6 +139,9 @@ body {
 }
 
 .description__cta {
+  position: relative;
+  top: 15px;
+  z-index: 5;
   font-size: 1.2em;
   color: white;
 }
@@ -180,7 +207,7 @@ body {
 }
 
 .restaurant__card {
-  width: 100%;
+  width: 335px;
   height: 250px;
   margin-bottom: 30px;
   overflow: hidden;
@@ -201,15 +228,30 @@ body {
   font-weight: 400;
 }
 
+.restaurant__heart__acceuil :hover::after, .restaurant__heartpage :hover::after {
+  opacity: 1;
+}
+.restaurant__heart__page {
+  position: relative;
+}
+
 .fa-heart {
   font-size: 1.5em;
   color: black;
-}
-.fa-heart:hover {
-  transition: all 2s ease;
-  font-weight: 900;
-  color: rgb(147, 86, 220);
   cursor: pointer;
+}
+.fa-heart::after {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  content: "\f004";
+  font-weight: 900;
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: rgb(147, 86, 220);
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
 }
 
 .placement_heart_i {
@@ -276,7 +318,9 @@ footer > p {
 }
 
 .image_background {
-  width: 375px;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
   position: relative;
   margin-bottom: -50px;
 }
@@ -289,8 +333,9 @@ footer > p {
 }
 
 .title__box__menu {
-  padding: 15px;
-  padding-top: 35px;
+  width: 335px;
+  margin: auto;
+  padding-top: 15px;
   justify-content: space-between;
 }
 
@@ -397,6 +442,22 @@ footer > p {
 .btn_commander {
   width: 230px;
   margin: 40px auto;
+}
+
+.fadein1 {
+  animation: apparition 0.4s linear;
+}
+
+.fadein2 {
+  animation: apparition 0.6s linear;
+}
+
+.fadein3 {
+  animation: apparition 0.8s linear;
+}
+
+.fadein4 {
+  animation: apparition 1s linear;
 }
 
 /*# sourceMappingURL=style_phone.css.map */
