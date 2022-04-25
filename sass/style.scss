@@ -296,6 +296,10 @@ footer {
     @extend %flex_row_center;
     justify-content: space-between;
     @extend %title_fw700_fs1-2em;
+    cursor: pointer;
+    &:hover .fa-heart::after {
+        opacity: 1;
+    }
 }
 
 .heart_restaurant {
@@ -317,6 +321,7 @@ footer {
 
 // 
 // Debut systeme box__menu + effet hover
+//
 .box__menu {
     width: 360px;
     height: 60px;
@@ -434,3 +439,57 @@ footer {
 
 // Fin des pages menus
 //
+.loader_spinner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    background-color: #f6f6f6;
+    opacity: 1;
+    animation: disparition 1s forwards;
+    animation-delay: 5s;
+}
+
+.spinner_container {
+    @extend %relative_centre;
+    width: 375px;
+    height: 400px;
+}
+
+.circlespinner1 {
+    @extend %relative_centre;
+    width: 100px;
+    height: 100px;
+    border: $prim-color 2px solid;
+    border-radius: 50px;
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: $prim-color;
+        top: 0;
+        left: 0;
+        animation: pulse 1.5s 3 ease-out;
+    }
+}
+
+.circlespinner2 {
+    @extend %relative_centre;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background: $sd-color;
+    border: $sd-color 2px solid;
+}
+
+.loading_i {
+    @extend %relative_centre;
+    font-size: 2em;
+    color: white;
+}
