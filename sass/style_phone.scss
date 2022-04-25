@@ -40,16 +40,17 @@ body {
 //
 .location {
     display: flex;
+    flex-direction: row;
     height: 50px;
     background-color: #eaeaea;
     box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.2);
-    &__pin {
-        position: relative;
-        top: 15px;
-        left: 105px;
-    }
     &__ville {
+        position: relative;
         margin: auto;
+    }
+    &__pin {
+        position: absolute;
+        left: -30px;
     }
 }
 
@@ -146,6 +147,7 @@ body {
 .restaurant__wrapper {
     width: 335px;
     margin: auto;
+    @extend %flex_column_center;
 }
 
 .restaurant__card {

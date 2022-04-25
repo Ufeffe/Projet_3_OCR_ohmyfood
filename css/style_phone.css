@@ -35,7 +35,7 @@
     z-index: -5;
   }
 }
-.process__wrapper, .discover {
+.restaurant__wrapper, .process__wrapper, .discover {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -120,17 +120,18 @@ body {
 
 .location {
   display: flex;
+  flex-direction: row;
   height: 50px;
   background-color: #eaeaea;
   box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
-.location__pin {
-  position: relative;
-  top: 15px;
-  left: 105px;
-}
 .location__ville {
+  position: relative;
   margin: auto;
+}
+.location__pin {
+  position: absolute;
+  left: -30px;
 }
 
 .discover {

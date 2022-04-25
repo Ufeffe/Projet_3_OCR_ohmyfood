@@ -1,0 +1,18 @@
+@media all and (min-width:768px)and (max-width:992px) {
+    body {
+        width: 100%;
+    }
+    .discover__title {
+        width: 320px;
+    }
+    .restaurant__wrapper {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .box__menu__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

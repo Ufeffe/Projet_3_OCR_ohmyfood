@@ -1,0 +1,32 @@
+@media only screen and (min-width: 992px) {
+  body {
+    width: 1280px;
+  }
+
+  .discover__title {
+    width: 320px;
+  }
+
+  .process__wrapper {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .restaurant__wrapper {
+    width: 1100px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .box__menu__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .box__menu__4 {
+    margin: 15px 33px;
+  }
+}
+
+/*# sourceMappingURL=style_desktop.css.map */
