@@ -76,13 +76,7 @@ body {
 
 .btn__cta {
     @extend %btn_cta;
-}
-
-.description__cta {
-    position: relative;
-    top: 15px;
-    z-index: 5;
-    @include font_size_color(1.2em, white);
+    @include font_size_color(1em, white);
 }
 
 // Fin de la section Exploration
@@ -177,14 +171,16 @@ body {
 }
 
 .restaurant__heart {
-    &__acceuil,
-    &page {
+    &__acceuil {
          :hover::after {
             opacity: 1;
         }
     }
     &__page {
         position: relative;
+        &:hover .fa-heart::after {
+            opacity: 1;
+        }
     }
 }
 
@@ -297,9 +293,6 @@ footer {
     justify-content: space-between;
     @extend %title_fw700_fs1-2em;
     cursor: pointer;
-    &:hover .fa-heart::after {
-        opacity: 1;
-    }
 }
 
 .heart_restaurant {
@@ -319,6 +312,13 @@ footer {
     border-bottom: solid $ter-color 3px;
 }
 
+.btn_commander {
+    width: 230px;
+    margin: 40px auto;
+}
+
+// Fin des pages menus
+//
 // 
 // Debut systeme box__menu + effet hover
 //
@@ -344,13 +344,9 @@ footer {
     &:hover .rotate {
         transform: rotate(360deg);
     }
-    //
-    // effet de ressort à l'apparition du prix
-    // &:hover .price {
-    //     padding-left: 45px;
-    // }
-    //
-    //
+    &:hover .price {
+        padding-left: 45px;
+    }
 }
 
 .box__menu__info {
@@ -371,7 +367,7 @@ footer {
 }
 
 .price {
-    // transition: all 0.5s;
+    transition: all 0.5s;
     margin: auto;
     padding-top: 15px
 }
@@ -391,11 +387,8 @@ footer {
     &_circle {
         width: 20px;
         height: 20px;
-        border: 1px white solid;
-        background-color: white;
+        background: white;
         border-radius: 50%;
-    }
-    &_circle {
         margin: auto;
     }
 }
@@ -416,11 +409,9 @@ footer {
 
 // Fin du systeme box__menu + effet hover
 //
-.btn_commander {
-    width: 230px;
-    margin: 40px auto;
-}
-
+// 
+// Debut Fadein
+//
 .fadein1 {
     animation: apparition 0.4s linear;
 }
@@ -437,7 +428,11 @@ footer {
     animation: apparition 1s linear;
 }
 
-// Fin des pages menus
+// 
+// Fin Fadein
+//
+// 
+// Debut Spinner
 //
 .loader_spinner {
     position: absolute;
@@ -449,7 +444,7 @@ footer {
     background-color: #f6f6f6;
     opacity: 1;
     animation: disparition 1s forwards;
-    animation-delay: 5s;
+    animation-delay: 3s;
 }
 
 .spinner_container {
@@ -475,7 +470,7 @@ footer {
         background: $prim-color;
         top: 0;
         left: 0;
-        animation: pulse 1.5s 3 ease-out;
+        animation: pulse 1s 3 ease-out;
     }
 }
 
@@ -493,3 +488,7 @@ footer {
     font-size: 2em;
     color: white;
 }
+
+// 
+// Fin Spinner
+//
