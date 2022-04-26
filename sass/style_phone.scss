@@ -8,6 +8,7 @@ p {
 
 h1 {
     font-family: $font-title;
+    font-weight: 400;
 }
 
 a {
@@ -236,9 +237,10 @@ body {
     height: 200px;
     background-color: #353535;
     color: white;
-    &>p {
+    &>h2 {
         font-family: $font-title;
         font-size: 1.2em;
+        font-weight: 400;
         letter-spacing: 0.05em;
         padding-top: 15px;
         margin: 0px 0px 10px 25px;
