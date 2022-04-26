@@ -1,6 +1,7 @@
 @media only screen and (min-width: 992px) {
   body {
-    width: 1280px;
+    width: 100%;
+    max-width: 1280px;
   }
 
   .discover__title {
@@ -8,12 +9,15 @@
   }
 
   .process__wrapper {
+    max-width: 1200px;
+    margin: auto;
     flex-direction: row;
     justify-content: space-evenly;
   }
 
   .restaurant__wrapper {
-    width: 1100px;
+    width: 100%;
+    max-width: 900px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -22,10 +26,6 @@
   .box__menu__wrapper {
     display: flex;
     flex-wrap: wrap;
-  }
-
-  .box__menu__4 {
-    margin: 15px 33px;
   }
 }
 

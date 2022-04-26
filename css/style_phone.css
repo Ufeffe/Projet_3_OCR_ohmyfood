@@ -53,7 +53,7 @@
   font-weight: 700;
 }
 
-.loading_i, .circlespinner2, .circlespinner1, .spinner_container {
+.loading_i, .loader_circle {
   position: relative;
   top: 50%;
   left: 50%;
@@ -66,7 +66,7 @@
   margin-bottom: 30px;
   background: rgb(147, 86, 220);
   background: linear-gradient(354deg, rgb(147, 86, 220) 0%, rgb(213, 107, 219) 67%, rgb(255, 121, 218) 100%);
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
   border-radius: 50px;
   border: white;
   cursor: pointer;
@@ -82,7 +82,7 @@
   height: 65px;
   margin-bottom: 15px;
   border-radius: 15px;
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
 }
 
 li,
@@ -105,7 +105,9 @@ ul {
 
 body {
   margin: auto;
-  width: 375px;
+  width: 100%;
+  min-width: 375px;
+  height: 100vh;
 }
 
 .logo__header__holder {
@@ -290,12 +292,12 @@ body {
   font-size: 0.9em;
 }
 
-footer {
+.footer {
   height: 200px;
   background-color: #353535;
   color: white;
 }
-footer > p {
+.footer > p {
   font-family: "Shrikhand", cursive;
   font-size: 1.2em;
   letter-spacing: 0.05em;
@@ -304,14 +306,14 @@ footer > p {
   color: white;
 }
 
-.list__footer {
+.footer ul {
   margin-left: 15px;
 }
 
-.list__footer__li {
+.footer ul li {
   margin: 10px;
 }
-.list__footer__li > a {
+.footer ul li > a {
   color: white;
 }
 
@@ -361,6 +363,7 @@ footer > p {
   text-transform: uppercase;
   margin-left: 15px;
   padding-top: 15px;
+  margin-bottom: 4px;
 }
 
 .underline {
@@ -410,9 +413,11 @@ footer > p {
   font-weight: 600;
   white-space: nowrap;
   margin-right: 150px;
+  line-height: 1.5;
 }
 .box__menu__info__sub {
   font-size: 0.8em;
+  font-weight: 100;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -421,7 +426,9 @@ footer > p {
 .price {
   transition: all 0.5s;
   margin: auto;
-  padding-top: 15px;
+  padding-top: 20px;
+  font-size: 0.85em;
+  font-weight: 500;
 }
 
 .menu__hover__text {
@@ -445,15 +452,12 @@ footer > p {
   margin: auto;
 }
 
-.fa-check {
-  color: #99E2D0;
-}
-
 .rotate {
   transition: 1.2s ease;
 }
 
 .fa-check {
+  color: #99E2D0;
   position: relative;
   top: 3px;
   left: 3px;
@@ -475,7 +479,7 @@ footer > p {
   animation: apparition 1s linear;
 }
 
-.loader_spinner {
+.loader_container {
   position: absolute;
   top: 0;
   left: 0;
@@ -488,18 +492,13 @@ footer > p {
   animation-delay: 3s;
 }
 
-.spinner_container {
-  width: 375px;
-  height: 400px;
-}
-
-.circlespinner1 {
+.loader_circle {
   width: 100px;
   height: 100px;
-  border: #9356DC 2px solid;
+  background-color: #FF79DA;
   border-radius: 50px;
 }
-.circlespinner1::after {
+.loader_circle::after {
   content: "";
   display: block;
   position: absolute;
@@ -511,14 +510,6 @@ footer > p {
   top: 0;
   left: 0;
   animation: pulse 1s 3 ease-out;
-}
-
-.circlespinner2 {
-  width: 100px;
-  height: 100px;
-  border-radius: 50px;
-  background: #FF79DA;
-  border: #FF79DA 2px solid;
 }
 
 .loading_i {
